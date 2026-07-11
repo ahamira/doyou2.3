@@ -1,60 +1,43 @@
 import './style.css'
-import typescriptLogo from './assets/typescript.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import { setupCounter } from './counter.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<section id="center">
-  <div class="hero">
-    <img src="${heroImg}" class="base" width="170" height="179">
-    <img src="${typescriptLogo}" class="framework" alt="TypeScript logo"/>
-    <img src="${viteLogo}" class="vite" alt="Vite logo" />
-  </div>
-  <div>
-    <h1>Get started</h1>
-    <p>Edit <code>src/main.ts</code> and save to test <code>HMR</code></p>
-  </div>
-  <button id="counter" type="button" class="counter"></button>
-</section>
+<div class="container">
+  <header>
+    <h1>笠井 楓斗</h1>
+    <p>Unity / TypeScript Developer</p>
+  </header>
 
-<div class="ticks"></div>
+  <section>
+    <h2>自己紹介</h2>
+    <p>
+      Unityを使ったゲーム開発を学習しています。
+      現在はタワーディフェンスやRPGの制作に取り組んでいます。
+    </p>
+  </section>
 
-<section id="next-steps">
-  <div id="docs">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
-    <h2>Documentation</h2>
-    <p>Your questions, answered</p>
+  <section>
+    <h2>スキル</h2>
     <ul>
-      <li>
-        <a href="https://vite.dev/" target="_blank">
-          <img class="logo" src="${viteLogo}" alt="" />
-          Explore Vite
-        </a>
-      </li>
-      <li>
-        <a href="https://www.typescriptlang.org" target="_blank">
-          <img class="button-icon" src="${typescriptLogo}" alt="">
-          Learn more
-        </a>
-      </li>
+      <li>Unity</li>
+      <li>C#</li>
+      <li>TypeScript</li>
+      <li>HTML</li>
+      <li>CSS</li>
     </ul>
-  </div>
-  <div id="social">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
-    <ul>
-      <li><a href="https://github.com/vitejs/vite" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
-      <li><a href="https://chat.vite.dev/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
-      <li><a href="https://x.com/vite_js" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#x-icon"></use></svg>X.com</a></li>
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
-    </ul>
-  </div>
-</section>
+  </section>
 
-<div class="ticks"></div>
-<section id="spacer"></section>
+  <section>
+    <h2>制作物</h2>
+
+    <div class="card">
+      <h3>2Dタワーディフェンス</h3>
+      <p>Unityで制作した2Dタワーディフェンスゲーム</p>
+    </div>
+
+    <div class="card">
+      <h3>RPGバトルシステム</h3>
+      <p>ターン制バトルを実装したRPG</p>
+    </div>
+  </section>
+</div>
 `
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
